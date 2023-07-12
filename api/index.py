@@ -17,7 +17,7 @@ class Person:
 
 @dataclass
 class TeachingData:
-    data: List[Person]
+    preferences: List[Person]
     n_blocks: int
     weights: List[float]
     low_priority_weight: float
@@ -37,7 +37,7 @@ def solve_teaching_problem():
 
     # Create solver and solve problem
     solver = TeachingSolver(
-        teaching_data.data,
+        teaching_data.preferences,
         teaching_data.n_blocks,
         teaching_data.weights,
         teaching_data.low_priority_weight,

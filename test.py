@@ -1,11 +1,12 @@
 import requests
 import json
 
+# url = "https://learning-exp-api.vercel.app/solve"
 url = "http://localhost:3001/solve"
 
 # This is a sample data, replace with actual input
 data = {
-    "data": [
+    "preferences": [
         {"name": "Person1", "out": ["Person2", "Person3", "Person4", "Person5"]},
         {"name": "Person2", "out": ["Person1", "Person3", "Person4", "Person5"]},
         {"name": "Person3", "out": ["Person1", "Person2", "Person4", "Person5"]},
