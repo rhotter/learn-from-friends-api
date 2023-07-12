@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from modules.solver import (
     TeachingSolver,
 )  # assuming you've moved the code into a separate file
@@ -7,6 +8,7 @@ from dataclasses import dataclass
 from typing import List
 
 app = Flask(__name__)
+CORS(app)  # This will enable CORS for all routes
 
 
 @dataclass
